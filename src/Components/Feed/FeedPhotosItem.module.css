@@ -1,10 +1,10 @@
 .photo:nth-child(2) {
-  grid-column: 2/4;
-  grid-row: span/2;
+  grid-column: 2 / 4;
+  grid-row: span 2;
 }
 
 @media (max-width: 40rem) {
-  .photo {
+  .photo:nth-child(2) {
     grid-column: initial;
     grid-row: initial;
   }
@@ -17,9 +17,10 @@
   cursor: pointer;
 }
 
-.phogo img {
+.photo img {
   grid-area: 1/1;
 }
+
 .visualizacao {
   background: rgba(0, 0, 0, 0.3);
   color: white;
@@ -37,7 +38,7 @@
   content: '';
   display: inline-block;
   margin-right: 0.25rem;
-  background: url(../../Assets/visualizacao.svg);
+  background: url('../../Assets/visualizacao.svg') no-repeat;
 }
 
 .photo:hover .visualizacao {
