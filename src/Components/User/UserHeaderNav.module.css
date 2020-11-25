@@ -19,12 +19,12 @@
 }
 
 .nav a:hover,
+.nav a:focus,
 .nav button:hover,
-nav a:focus,
-nav button:focus {
+.nav button:focus {
   background: white;
   box-shadow: 0 0 0 3px #eee;
-  border-color: #333333;
+  border-color: #333;
   outline: none;
 }
 
@@ -34,7 +34,7 @@ nav button:focus {
   border-color: #fb1;
 }
 
-nav a.active svg > * {
+.nav a.active svg > * {
   fill: #fb1;
 }
 
@@ -57,9 +57,9 @@ nav a.active svg > * {
   display: block;
   width: 1.2rem;
   height: 2px;
-  background: currentColor;
   border-radius: 2px;
-  box-shadow: 0px 6px currentColor, 0 -6px currentColor;
+  background: currentColor;
+  box-shadow: 0 6px currentColor, 0 -6px currentColor;
   transition: 0.2s;
 }
 
@@ -74,7 +74,7 @@ nav a.active svg > * {
 }
 
 .mobileButtonActive::after {
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
   width: 4px;
   height: 4px;
   box-shadow: 0 8px currentColor, 0 -8px currentColor;
@@ -98,8 +98,8 @@ nav a.active svg > * {
   transition: 0.3s;
   transform: initial;
   opacity: 1;
+  pointer-events: initial;
   z-index: 100;
-  pointer-events: all;
 }
 
 .navMobile a,

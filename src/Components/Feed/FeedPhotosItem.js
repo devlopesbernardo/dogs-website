@@ -1,8 +1,8 @@
 import React from 'react';
-import Image from '../Helper/Image';
 import styles from './FeedPhotosItem.module.css';
+import Image from '../Helper/Image';
 
-export const FeedPhotosItem = ({ photo, setModalPhoto }) => {
+const FeedPhotosItem = ({ photo, setModalPhoto }) => {
   function handleClick() {
     setModalPhoto(photo);
   }
@@ -13,3 +13,5 @@ export const FeedPhotosItem = ({ photo, setModalPhoto }) => {
     </li>
   );
 };
+
+export default FeedPhotosItem;

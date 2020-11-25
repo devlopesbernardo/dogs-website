@@ -1,12 +1,12 @@
 import React from 'react';
-import { PHOTOS_GET } from '../../api';
+import FeedPhotosItem from './FeedPhotosItem';
 import useFetch from '../../Hooks/useFetch';
+import { PHOTOS_GET } from '../../Api';
 import Error from '../Helper/Error';
-import { Loading } from '../Helper/Loading';
-import { FeedPhotosItem } from './FeedPhotosItem';
+import Loading from '../Helper/Loading';
 import styles from './FeedPhotos.module.css';
 
-export const FeedPhotos = ({ page, user, setModalPhoto, setInfinite }) => {
+const FeedPhotos = ({ page, user, setModalPhoto, setInfinite }) => {
   const { data, loading, error, request } = useFetch();
 
   React.useEffect(() => {
@@ -36,3 +36,5 @@ export const FeedPhotos = ({ page, user, setModalPhoto, setInfinite }) => {
     );
   else return null;
 };
+
+export default FeedPhotos;

@@ -1,7 +1,7 @@
 import React from 'react';
-import { PHOTO_DELETE } from '../../api';
-import useFetch from '../../Hooks/useFetch';
 import styles from './PhotoDelete.module.css';
+import { PHOTO_DELETE } from '../../Api';
+import useFetch from '../../Hooks/useFetch';
 
 const PhotoDelete = ({ id }) => {
   const { loading, request } = useFetch();
@@ -14,14 +14,15 @@ const PhotoDelete = ({ id }) => {
       if (response.ok) window.location.reload();
     }
   }
+
   return (
     <>
       {loading ? (
-        <button className={styles.delete} onClick={handleClick}>
-          Deletando...
+        <button className={styles.delete} disabled>
+          Deletar
         </button>
       ) : (
-        <button className={styles.delete} onClick={handleClick}>
+        <button onClick={handleClick} className={styles.delete}>
           Deletar
         </button>
       )}

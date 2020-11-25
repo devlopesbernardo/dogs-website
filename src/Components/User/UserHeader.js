@@ -6,15 +6,15 @@ import { useLocation } from 'react-router-dom';
 const UserHeader = () => {
   const [title, setTitle] = React.useState('');
   const location = useLocation();
-  console.log(location);
+
   React.useEffect(() => {
     const { pathname } = location;
     switch (pathname) {
-      case '/conta/estatistica':
-        setTitle('Estatísticas');
-        break;
       case '/conta/postar':
-        setTitle('Poste sua Foto');
+        setTitle('Poste Sua Foto');
+        break;
+      case '/conta/estatisticas':
+        setTitle('Estatísticas');
         break;
       default:
         setTitle('Minha Conta');

@@ -1,6 +1,6 @@
 import React from 'react';
-import { FeedModal } from './FeedModal';
-import { FeedPhotos } from './FeedPhotos';
+import FeedModal from './FeedModal';
+import FeedPhotos from './FeedPhotos';
 
 const Feed = ({ user }) => {
   const [modalPhoto, setModalPhoto] = React.useState(null);

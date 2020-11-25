@@ -3,13 +3,14 @@
 * {
   box-sizing: border-box;
 }
+
 body {
+  padding-top: 4rem;
   margin: 0px;
   color: #333;
   --type-first: Helvetica, Arial, sans-serif;
   --type-second: 'Spectral', Georgia;
   font-family: var(--type-first);
-  padding-top: 4rem;
 }
 
 h1,
@@ -40,6 +41,11 @@ input {
   color: #333;
 }
 
+a {
+  text-decoration: none;
+  color: #333;
+}
+
 .container {
   max-width: 50rem;
   padding: 0 1rem;
@@ -48,11 +54,6 @@ input {
 
 .mainContainer {
   margin-top: 2rem;
-}
-
-a {
-  text-decoration: none;
-  color: #333;
 }
 
 .title {
@@ -69,7 +70,7 @@ a {
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #fb1;
+  background: #fb1;
   position: absolute;
   bottom: 5px;
   left: -5px;
